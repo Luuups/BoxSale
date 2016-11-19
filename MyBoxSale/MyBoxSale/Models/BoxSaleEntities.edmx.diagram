@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="89d6864b4287451aae454b0432b4dc3e" Name="Diagram1">
+        <EntityTypeShape EntityType="MYBOXSALEModel.CATEGORIA" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.DETALLEVENTA" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.EMPRESA" Width="1.5" PointX="1.5" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.PAGO" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.PRODUCTO" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.PROMOCION" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.PROVEEDOR" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.ROLES" Width="1.5" PointX="3.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.TIPOPAGO" Width="1.5" PointX="8.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.TIPOPROMOCION" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.UNIDADMEDIDA" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.USUARIO" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.USUARIOROLES" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.VENTA" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.VENTAPROMOCION" Width="1.5" PointX="8.75" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__PRODUCTO__Catego__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__DETALLEVE__Produ__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__DETALLEVE__Venta__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__USUARIO__Empresa__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__PAGO__VentaId__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__PRODUCTO__Provee__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__PRODUCTO__Unidad__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__PROMOCION__Produ__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__PROMOCION__TipoI__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__USUARIORO__RolId__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__USUARIORO__UserI__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="MYBOXSALEModel.FK__VENTA__UsuarioId__3C69FB99" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "CreaRolesUsuarios";
+}
+@model MyBoxSale.Models.USUARIO
+<h2>Creacion de Usuarios</h2>
+
+@using (Html.BeginForm("CreaRolesUsuarios", "Empresa", FormMethod.Post))
+{ 
+    @Html.HiddenFor(x=>x.EmpresaId)
+    <div class="form-group">
+        @Html.LabelFor(x=>x.Nombre)
+        @Html.TextBoxFor(x=>x.Nombre,new {@class="form-control",@required="required"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x=>x.Apellidos)
+        @Html.TextBoxFor(x=>x.Apellidos,new {@class="form-control",@required="required"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x=>x.NombreUsuario)
+        @Html.TextBoxFor(x=>x.NombreUsuario,new {@class="form-control",@required="required"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x=>x.Password)
+        @Html.TextBoxFor(x=>x.Password,new {@class="form-control",@type="password",@required="required"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x=>x.Direccion)
+        @Html.TextBoxFor(x=>x.Direccion,new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x=>x.Telefono)
+        @Html.TextBoxFor(x=>x.Telefono,new {@class="form-control"})
+    </div>
+    <button type="submit" class="btn btn-primary">Continuar</button>
+}
