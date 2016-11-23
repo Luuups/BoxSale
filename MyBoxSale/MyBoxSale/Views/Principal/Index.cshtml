@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Principal</h2>
+<div class="alert alert-info">
+    <p>
+        Bienvenido <strong>@User.Identity.Name</strong> ,Este es el Menu principal.
+    </p>
+</div>
+ @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+ {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a>
+        }

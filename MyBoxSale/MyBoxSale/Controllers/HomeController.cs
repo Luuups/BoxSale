@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyBoxSale.Filters;
 using MyBoxSale.Models;
 using WebMatrix.WebData;
 
@@ -10,9 +11,11 @@ namespace MyBoxSale.Controllers
 {
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            if (User.Identity.IsAuthenticated)
+                return RedirectToAction("Index", "Principal");
 
             return View();
         }
@@ -20,6 +23,7 @@ namespace MyBoxSale.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [InitializeSimpleMembership]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
             if (ModelState.IsValid && WebSecurity.Login(model.NombreUsuario, model.Password, persistCookie: model.RememberMe))
@@ -28,7 +32,7 @@ namespace MyBoxSale.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            ModelState.AddModelError("", "El nombre de usuario o contraseña es incorrecto.");
             return View("Index", model);
         }
 
@@ -41,7 +45,7 @@ namespace MyBoxSale.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Principal");
             }
         }
         #endregion

@@ -29,19 +29,27 @@ namespace MyBoxSale.Controllers
         {
             if (ModelState.IsValid)
             {
-                var empresa=Be.EMPRESA.Add(new EMPRESA
+                var ConsultEmpresa = Be.EMPRESA.Any(x => x.Telefono.Equals(_empresa.Nombre, StringComparison.CurrentCultureIgnoreCase));
+                if (!ConsultEmpresa)
                 {
-                    Nombre = _empresa.Nombre,
-                    Direccion = _empresa.Direccion,
-                    Telefono = _empresa.Telefono,
-                    FechaCreacion = DateTime.Now,
-                    Activo=true
-                });
+                    var empresa = Be.EMPRESA.Add(new EMPRESA
+                    {
+                        Nombre = _empresa.Nombre,
+                        Direccion = _empresa.Direccion,
+                        Telefono = _empresa.Telefono,
+                        FechaCreacion = DateTime.Now,
+                        Activo = true
+                    });
 
-                Be.SaveChanges();
-                return RedirectToAction("CreaRolesUsuarios",  new { id=empresa.Id });
+                    Be.SaveChanges();
+                    return RedirectToAction("CreaRolesUsuarios", new { id = empresa.Id });
+                }
+                else
+                {
+                    ModelState.AddModelError("Empresa", "La Empresa ya existe.");
+                }
             }
-            return View();
+            return View("Index",_empresa);
         }
 
         [AllowAnonymous]

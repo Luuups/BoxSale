@@ -166,6 +166,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NotificacionesController.cs" />
+    <Compile Include="Controllers\PrincipalController.cs" />
+    <Compile Include="Controllers\ProductoController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,6 +199,7 @@
     <Compile Include="Models\EMPRESA.cs">
       <DependentUpon>BoxSaleEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Local\Notificacion.cs" />
     <Compile Include="Models\PAGO.cs">
       <DependentUpon>BoxSaleEntities.tt</DependentUpon>
     </Compile>
@@ -230,6 +235,12 @@
       <DependentUpon>BoxSaleEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VENTAPROMOCION.cs">
+      <DependentUpon>BoxSaleEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webpages_Membership.cs">
+      <DependentUpon>BoxSaleEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webpages_OAuthMembership.cs">
       <DependentUpon>BoxSaleEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -309,6 +320,7 @@
       <LastGenOutput>BoxSaleEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Images\Cuentas_de_usuario.png" />
+    <Content Include="Images\empresa.jpg" />
     <Content Include="Models\BoxSaleEntities.edmx.diagram">
       <DependentUpon>BoxSaleEntities.edmx</DependentUpon>
     </Content>
@@ -383,9 +395,14 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Empresa\Index.cshtml" />
     <Content Include="Views\Empresa\CreaRolesUsuarios.cshtml" />
+    <Content Include="Views\Ventas\Index.cshtml" />
+    <Content Include="Views\Principal\Index.cshtml" />
+    <Content Include="Views\Producto\Index.cshtml" />
+    <Content Include="Views\Producto\NuevoProducto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Productos\" />
     <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>

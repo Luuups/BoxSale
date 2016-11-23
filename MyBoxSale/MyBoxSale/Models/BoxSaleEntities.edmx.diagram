@@ -32,6 +32,8 @@
         <AssociationConnector Association="MYBOXSALEModel.FK__USUARIORO__RolId__2D27B809" ManuallyRouted="false" />
         <AssociationConnector Association="MYBOXSALEModel.FK__USUARIORO__UserI__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="MYBOXSALEModel.FK__VENTA__UsuarioId__3C69FB99" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.webpages_Membership" Width="1.5" PointX="1.1325741676299712" PointY="5.0637044185137858" />
+        <EntityTypeShape EntityType="MYBOXSALEModel.webpages_OAuthMembership" Width="1.5" PointX="4.6746072660547711" PointY="18.298568793711517" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

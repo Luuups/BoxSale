@@ -53,7 +53,7 @@ namespace MyBoxSale.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-
+            var response = User.Identity.IsAuthenticated;
             return RedirectToAction("Index", "Home");
         }
 

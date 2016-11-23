@@ -16,6 +16,8 @@
     <EntitySet Name="USUARIOROLES" EntityType="MYBOXSALEModel.Store.USUARIOROLES" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="VENTA" EntityType="MYBOXSALEModel.Store.VENTA" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="VENTAPROMOCION" EntityType="MYBOXSALEModel.Store.VENTAPROMOCION" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="MYBOXSALEModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="MYBOXSALEModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK__DETALLEVE__Produ__412EB0B6" Association="MYBOXSALEModel.Store.FK__DETALLEVE__Produ__412EB0B6">
       <End Role="PRODUCTO" EntitySet="PRODUCTO" />
       <End Role="DETALLEVENTA" EntitySet="DETALLEVENTA" />
@@ -221,6 +223,31 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="VentaId" Type="int" />
     <Property Name="PromocionId" Type="int" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK__DETALLEVE__Produ__412EB0B6">
     <End Role="PRODUCTO" Type="MYBOXSALEModel.Store.PRODUCTO" Multiplicity="0..1" />

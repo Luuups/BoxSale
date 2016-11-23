@@ -12,17 +12,10 @@ namespace MyBoxSale.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CATEGORIA
+    public partial class webpages_OAuthMembership
     {
-        public CATEGORIA()
-        {
-            this.PRODUCTO = new HashSet<PRODUCTO>();
-        }
-    
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public Nullable<bool> Activo { get; set; }
-    
-        public virtual ICollection<PRODUCTO> PRODUCTO { get; set; }
+        public string Provider { get; set; }
+        public string ProviderUserId { get; set; }
+        public int UserId { get; set; }
     }
 }
