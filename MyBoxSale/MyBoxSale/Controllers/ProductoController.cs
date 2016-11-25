@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using MyBoxSale.Models;
 using MyBoxSale.Core;
 using System.Data.Objects.SqlClient;
+using MyBoxSale.Models.Local;
 
 namespace MyBoxSale.Controllers
 {
@@ -22,19 +23,19 @@ namespace MyBoxSale.Controllers
             {
                 var Producto = (from producto in Entities.PRODUCTO
                                 orderby producto.Nombre
-                                select new
+                                select new ProductoView
                                 {
-                                    producto.Id,
-                                    producto.Nombre,
-                                    producto.PrecioCompra,
-                                    producto.PrecioMostrador,
-                                    producto.Activo,
-                                    producto.CATEGORIA,
-                                    producto.UNIDADMEDIDA,
-                                    producto.StockMin,
-                                    producto.Existencia,
-                                    producto.PROVEEDOR,
-                                    producto.Imagen
+                                    Id=producto.Id,
+                                    Nombre=producto.Nombre,
+                                    PrecioCompra=producto.PrecioCompra,
+                                    PrecioMostrador = producto.PrecioMostrador,
+                                    Activo=producto.Activo,
+                                    CATEGORIA=producto.CATEGORIA,
+                                    UNIDADMEDIDA=producto.UNIDADMEDIDA,
+                                    StockMin=producto.StockMin,
+                                    Existencia=producto.Existencia,
+                                    PROVEEDOR=producto.PROVEEDOR,
+                                    Imagen=producto.Imagen
                                 }).ToList();
                 return View(Producto);
             }
@@ -84,7 +85,7 @@ namespace MyBoxSale.Controllers
 
                     if (_producto.FileImg != null)
                     {
-                        string path = Path.Combine(Server.MapPath("~/Images/Producto"),
+                        string path = Path.Combine(Server.MapPath("~/Images/Productos"),
                                            Path.GetFileName(_producto.FileImg.FileName));
                         _producto.FileImg.SaveAs(path);
                     }
@@ -96,6 +97,19 @@ namespace MyBoxSale.Controllers
             return View();
         }
 
-
+        public ActionResult Edit(int id)
+        {
+            using (Entities)
+            {
+                try
+                {
+                    return View(Entities.PRODUCTO.Find(id));
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
     }
 }
