@@ -201,6 +201,7 @@
       <DependentUpon>BoxSaleEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Local\Notificacion.cs" />
+    <Compile Include="Models\Local\ProductoView.cs" />
     <Compile Include="Models\PAGO.cs">
       <DependentUpon>BoxSaleEntities.tt</DependentUpon>
     </Compile>
@@ -247,10 +248,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\advertisement.PNG" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -312,10 +311,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
     <EntityDeploy Include="Models\BoxSaleEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BoxSaleEntities.Designer.cs</LastGenOutput>
@@ -325,7 +320,8 @@
     <Content Include="Models\BoxSaleEntities.edmx.diagram">
       <DependentUpon>BoxSaleEntities.edmx</DependentUpon>
     </Content>
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Content\fonts\KGInimitableOriginal.ttf" />
+    <Content Include="Content\fonts\MyBigHeartDemo.ttf" />
     <Content Include="Models\BoxSaleEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BoxSaleEntities.edmx</DependentUpon>
@@ -336,23 +332,11 @@
       <DependentUpon>BoxSaleEntities.edmx</DependentUpon>
       <LastGenOutput>BoxSaleEntities.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.1.0.debug.js" />
-    <Content Include="Scripts\knockout-2.1.0.js" />
-    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\Aplicacion\Anuncio.js" />
+    <Content Include="Scripts\fw\bootstrap.js" />
+    <Content Include="Scripts\Aplicacion\Empresa.js" />
+    <Content Include="Scripts\fw\jquery-1.9.1.js" />
+    <Content Include="Scripts\fw\jquery-ui-1.8.20.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -363,7 +347,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -400,9 +383,11 @@
     <Content Include="Views\Principal\Index.cshtml" />
     <Content Include="Views\Producto\Index.cshtml" />
     <Content Include="Views\Producto\NuevoProducto.cshtml" />
+    <Content Include="Views\Producto\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\assets\" />
     <Folder Include="Images\Productos\" />
     <Folder Include="Security\" />
   </ItemGroup>

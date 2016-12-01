@@ -1,24 +1,21 @@
-﻿html, body
-{
-background: rgba(248,80,50,1);
-background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 15%, rgba(246,41,12,1) 49%, rgba(240,47,23,1) 75%, rgba(231,56,39,1) 100%)!important;
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(15%, rgba(241,111,92,1)), color-stop(49%, rgba(246,41,12,1)), color-stop(75%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)))!important;
-background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 15%, rgba(246,41,12,1) 49%, rgba(240,47,23,1) 75%, rgba(231,56,39,1) 100%)!important;
-background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 15%, rgba(246,41,12,1) 49%, rgba(240,47,23,1) 75%, rgba(231,56,39,1) 100%)!important;
-background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 15%, rgba(246,41,12,1) 49%, rgba(240,47,23,1) 75%, rgba(231,56,39,1) 100%)!important;
-background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 15%, rgba(246,41,12,1) 49%, rgba(240,47,23,1) 75%, rgba(231,56,39,1) 100%)!important;
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
-    color:#000000 !important;
-    padding:0 !important;
-    margin:0 !important;
-    width:100%;
-    height:100%;
+﻿@font-face {
+  font-family: 'BoxSaleBase';
+  src: url(/Content/fonts/KGInimitableOriginal.ttf);
 }
-.custom-container
-{
-    height:inherit!important;
-	
+
+@font-face {
+  font-family: 'BoxSaleBase Small';
+  src: url(/Content/fonts/MyBigHeartDemo.ttf);
 }
+
+body {
+    font-family: 'BoxSaleBase', Fallback, sans-serif;
+}
+
+.custom-container {
+    height: 100vh;
+}
+
 
 /*Propiedades del Login*/
 .custom-row
@@ -87,7 +84,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', end
 /*############################################################*/
 
 /*Form Empresa*/
-#FormEmpresa
-{
-	width:50%;
-}
+

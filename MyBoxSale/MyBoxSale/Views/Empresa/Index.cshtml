@@ -3,6 +3,14 @@
     
 }
 @model MyBoxSale.Models.EMPRESA
+
+@Scripts.Render("~/bundles/Empresa")
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $("body").Empresa();
+    });
+</script>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
@@ -11,7 +19,7 @@
             Para Iniciar debes configurar algunos aspectos, por favor sigue las instrucciones para completar el proceso.
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-8">
                 @using (Html.BeginForm("CreaEmpresa", "Empresa", FormMethod.Post, new { @id = "FormEmpresa" }))
                 {
                     @Html.ValidationSummary(false, "", new {@class="text-danger" })
@@ -32,8 +40,8 @@
                     <button type="submit" id="Guardar" name="Guardar" class="btn btn-danger btn-lg">Guardar <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
                 }
             </div>
-            <div class="col-md-4">
-                <img src="~/Images/empresa.jpg" class="img-responsive img-circle" />
+            <div class='col-md-4 col-sm-4'>
+                <img src="~/Content/img/advertisement.PNG" class="img-responsive" />
             </div>
         </div>
     </div>
