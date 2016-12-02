@@ -55,6 +55,16 @@ h2.header {
     text-shadow: 2px 2px 5px #000000;
     font-size: 25px;
 }
+
+.form-control {
+    font-size: inherit;
+}
+
+@media screen and (min-width: 1200px) {
+    .form-control {
+        height: 57px;
+    }
+}
 /*#endregion layout*/
 
 
@@ -124,7 +134,3 @@ h2.header {
 }
 
 /*############################################################*/
-.no-margin {
-    margin: 0px;
-}
-/*Form Empresa*/
