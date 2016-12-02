@@ -12,7 +12,7 @@
 
     // The constructor
     _create: function () {
-        alert("hey te amo takamura");
+       // alert("hey te amo takamura");
     },
 
     _destroy: function () {

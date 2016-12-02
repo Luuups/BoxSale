@@ -248,8 +248,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\img\advertisement.PNG" />
+    <Content Include="Content\img\welcome-logo.jpg" />
+    <Content Include="Content\img\welcome-logo1.jpg" />
+    <Content Include="Content\img\welcome-logo2.jpg" />
+    <Content Include="Content\img\welcome-logo3.jpg" />
+    <Content Include="Content\img\welcome-logo4.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -387,7 +393,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\assets\" />
     <Folder Include="Images\Productos\" />
     <Folder Include="Security\" />
   </ItemGroup>

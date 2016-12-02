@@ -17,7 +17,8 @@ namespace MyBoxSale
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/bootstrap.css",    
-                "~/Content/site.css"));
+                "~/Content/site.css",
+                "~/Content/assets/animate.css"));
 
             bundles.Add(new StyleBundle("~/bundles/Empresa").Include(
                 "~/Scripts/Aplicacion/Empresa.js"));

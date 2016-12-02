@@ -13,6 +13,7 @@
 body {
     font-family: 'BoxSaleBase Small', Fallback, sans-serif;
     font-size: 18px;
+    overflow:hidden;
 }
 
 .custom-container {
@@ -30,20 +31,20 @@ body {
     background-repeat: no-repeat;
     right: 0px;
     z-index: -1;
-    background-image: url(/Content/img/welcome-logo.jpg);
+    background-image: url(/Content/img/welcome-logo3.jpg);
     background-size: 100% 100%;
-    opacity: 0.7;
 }
 
 .main-content {
-    margin: 95px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     width: 100%;
-    background-color: rgba(255,255,255,0.4);
-    height: 80%;
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
 }
 
 h2.header {
-    color: #4effd8;
+    /*color: #4effd8;*/
+    color: #ff7a45;
     margin: 30px 0px;
     text-shadow: 2px 2px 5px #000000;
     font-family: 'BoxSaleBase', Fallback, sans-serif;
@@ -51,7 +52,8 @@ h2.header {
 }
 
 .secondary-header {
-    color: #fff352;
+    /*color: #fff352;*/
+    color: rgb(0, 255, 210);
     text-shadow: 2px 2px 5px #000000;
     font-size: 25px;
 }
@@ -60,7 +62,7 @@ h2.header {
     font-size: inherit;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1800px) {
     .form-control {
         height: 57px;
     }
