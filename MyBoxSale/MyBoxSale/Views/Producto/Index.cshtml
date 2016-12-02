@@ -14,6 +14,7 @@
             <th>Unidad de Medida</th>
             <th>Proveedor</th>
             <th>Imagen</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -31,7 +32,9 @@
                 <td>@producto.StockMin</td>
                 <td>@(producto.UNIDADMEDIDA!=null?producto.UNIDADMEDIDA.Nombre:"")</td>
                 <td>@(producto.PROVEEDOR!=null?producto.PROVEEDOR.Nombre:"")</td>
-                <td><img src="./Images/Producto/@producto.Imagen" class="img-responsive img-rounded" /></td>
+                <td><img src="./Images/Productos/@producto.Imagen" class="img-responsive img-rounded" /></td>
+                <td><a href="@Url.Action("Delete", "Producto", new { id =producto.Id })">Eliminar</a>
+                <a href="@Url.Action("Edit", "Producto", new { id =producto.Id })">Editar</a></td>
             </tr>
             }
         }

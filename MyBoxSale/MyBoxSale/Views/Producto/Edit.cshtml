@@ -1,5 +1,52 @@
 ﻿@{
     ViewBag.Title = "Edit";
 }
-
-<h2>Edit</h2>
+@model MyBoxSale.Models.PRODUCTO
+<h2>Modificación de Producto</h2>
+<div class="row">
+    <div class="col-md-8">
+        @using (Html.BeginForm("Edit", "Producto", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken();
+            @Html.ValidationSummary(false)
+            @Html.HiddenFor(x => x.Id)
+            <div class="form-group">
+                @Html.LabelFor(x => x.Nombre)
+                @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.PrecioCompra)
+                @Html.TextBoxFor(x => x.PrecioCompra, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.PrecioMostrador)
+                @Html.TextBoxFor(x => x.PrecioMostrador, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.StockMin)
+                @Html.TextBoxFor(x => x.StockMin, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.CategoriaId)
+                @Html.DropDownListFor(x => x.CategoriaId, (List<SelectListItem>)ViewBag.Categoria, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.ProveedorId)
+                @Html.DropDownListFor(x => x.ProveedorId, (List<SelectListItem>)ViewBag.Proveedor, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.UnidadId)
+                @Html.DropDownListFor(x => x.UnidadId, (List<SelectListItem>)ViewBag.UnidadMedida, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Imagen</label>
+                <input type="file" id="FileImg" name="FileImg" />
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg">Guardar <span class="glyphicon glyphicon-floppy-disk"></span></button>                   
+}
+    </div>
+    <div class="col-md-4">
+        <img src="~/Images/Productos/@Model.Imagen" class="img-responsive img-round" />
+    </div>
+</div>
+<a href="@Url.Action("Index","Producto")">Regresar</a>
