@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "NewUser";
+}
+@model MyBoxSale.Models.USUARIO
+<div class="row">
+    <h2>Alta de Usuario</h2>
+    <div class="col-md-offset-1 col-md-10 col-md-offset-1">
+        @using (Html.BeginForm("NewUser", "Usuario", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false)
+            <div class="form-group">
+                @Html.LabelFor(x=>x.Nombre)
+                @Html.TextBoxFor(x=>x.Nombre,new {@class="form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x=>x.Apellidos)
+                @Html.TextBoxFor(x=>x.Apellidos,new {@class="form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x=>x.Direccion)
+                @Html.TextBoxFor(x=>x.Direccion,new {@class="form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x=>x.Telefono)
+                @Html.TextBoxFor(x=>x.Telefono,new {@class="form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x=>x.NombreUsuario)
+                @Html.TextBoxFor(x=>x.NombreUsuario,new {@class="form-control" })
+            </div>
+            <div class="form-group">
+                <div class="alert alert-info">
+                    <p>
+                        Todos los Usuarios se daran de alta con una contraseña automatica por lo que es necesario cambiarla posteriormente.
+                    </p>
+                </div>
+                @Html.LabelFor(x=>x.Password)
+                @Html.TextBoxFor(x=>x.Password,new {@class="form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x=>x.EmpresaId)
+                @Html.TextBox("EmpresaName",(string)ViewBag.Empresa.Nombre,new {@class="form-control" })
+            </div>
+            <button class="btn btn-danger" type="submit">Guardar</button>
+        }
+    </div>
+</div>

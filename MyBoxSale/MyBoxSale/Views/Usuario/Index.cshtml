@@ -2,8 +2,10 @@
     ViewBag.Title = "Index";
 }
 @model List<MyBoxSale.Models.Local.UsuarioView>
-<h2>Usuarios del Sistema</h2>
-<table class="table table-bordered">
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 col-md-offset-1">
+        <h2>Usuarios del Sistema</h2>
+        <table class="table table-bordered">
     <thead>
         <tr>
             <th>Id</th>
@@ -36,3 +38,7 @@
         }
     </tbody>
 </table>
+        @Html.ActionLink("Nuevo Usuario", "NewUser", "Usuario")
+    </div>
+</div>
+
