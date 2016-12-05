@@ -169,10 +169,13 @@ namespace MyBoxSale.Controllers
                     using (Entities)
                     {
                         _newUser.EmpresaId = Entities.EMPRESA.FirstOrDefault().Id;
+                        _newUser.Activo = true;
+                        _newUser.FechaAlta = DateTime.Now;
                         Entities.USUARIO.Add(_newUser);
                         Entities.SaveChanges();
                         Roles.AddUsersToRoles(new[] { _newUser.NombreUsuario }, new[] { "Cajero" });
                         WebSecurity.CreateAccount(_newUser.NombreUsuario, _newUser.Password);
+                        return RedirectToAction("Index");
                     }
                 }
                 catch (Exception ex)

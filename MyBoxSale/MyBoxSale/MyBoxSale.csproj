@@ -169,6 +169,7 @@
     <Compile Include="Controllers\NotificacionesController.cs" />
     <Compile Include="Controllers\PrincipalController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Core\BoxSaleController.cs" />
@@ -203,6 +204,7 @@
     </Compile>
     <Compile Include="Models\Local\Notificacion.cs" />
     <Compile Include="Models\Local\ProductoView.cs" />
+    <Compile Include="Models\Local\ProveedorView.cs" />
     <Compile Include="Models\Local\UsuarioView.cs" />
     <Compile Include="Models\Local\UsuarioViewEdit.cs" />
     <Compile Include="Models\PAGO.cs">
@@ -408,6 +410,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Usuario\NewUser.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Proveedor\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Proveedor\NuevoProveedor.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Proveedor\Editar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

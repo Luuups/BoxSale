@@ -13,6 +13,14 @@ namespace MyBoxSale
         {
             using (MyBoxSaleEntities db = new MyBoxSaleEntities())
             {
+                if (!Roles.Provider.RoleExists("Admin"))
+                {
+                    Roles.CreateRole("Admin");
+                }
+                if (!Roles.Provider.RoleExists("Cajero"))
+                {
+                    Roles.CreateRole("Cajero");
+                }
                 foreach(var user in usernames)
                     foreach (var rol in roleNames)
                     {
@@ -63,14 +71,19 @@ namespace MyBoxSale
             using (MyBoxSaleEntities db = new MyBoxSaleEntities())
             {
                 USUARIO user = db.USUARIO.FirstOrDefault(u => u.NombreUsuario.Equals(username, StringComparison.CurrentCultureIgnoreCase));
-                var Roles = from ur in user.USUARIOROLES
-                            from r in db.ROLES
-                            where ur.RolId == r.Id
-                            select r.Nombre;
-                if (Roles != null)
-                    return Roles.ToArray();
-                else
-                    return new string[] { };
+                if (user != null)
+                {
+                    var Roles = from ur in user.USUARIOROLES
+                                from r in db.ROLES
+                                where ur.RolId == r.Id
+                                select r.Nombre;
+                    if (Roles != null)
+                        return Roles.ToArray();
+                    else
+                        return new string[] { };
+                }
+                return new string[] { };
+                
             }
         }
 
