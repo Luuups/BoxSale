@@ -48,6 +48,7 @@
     <EntitySetMapping Name="PRODUCTO">
       <EntityTypeMapping TypeName="MYBOXSALEModel.PRODUCTO">
         <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="PrecioMostrador" ColumnName="PrecioMostrador" />

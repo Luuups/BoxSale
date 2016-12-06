@@ -18,51 +18,51 @@
     <EntitySet Name="VENTAPROMOCION" EntityType="MYBOXSALEModel.Store.VENTAPROMOCION" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="webpages_Membership" EntityType="MYBOXSALEModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="webpages_OAuthMembership" EntityType="MYBOXSALEModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK__DETALLEVE__Produ__412EB0B6" Association="MYBOXSALEModel.Store.FK__DETALLEVE__Produ__412EB0B6">
+    <AssociationSet Name="FK__DETALLEVE__Produ__4222D4EF" Association="MYBOXSALEModel.Store.FK__DETALLEVE__Produ__4222D4EF">
       <End Role="PRODUCTO" EntitySet="PRODUCTO" />
       <End Role="DETALLEVENTA" EntitySet="DETALLEVENTA" />
     </AssociationSet>
-    <AssociationSet Name="FK__DETALLEVE__Venta__403A8C7D" Association="MYBOXSALEModel.Store.FK__DETALLEVE__Venta__403A8C7D">
+    <AssociationSet Name="FK__DETALLEVE__Venta__412EB0B6" Association="MYBOXSALEModel.Store.FK__DETALLEVE__Venta__412EB0B6">
       <End Role="VENTA" EntitySet="VENTA" />
       <End Role="DETALLEVENTA" EntitySet="DETALLEVENTA" />
     </AssociationSet>
-    <AssociationSet Name="FK__PAGO__VentaId__46E78A0C" Association="MYBOXSALEModel.Store.FK__PAGO__VentaId__46E78A0C">
+    <AssociationSet Name="FK__PAGO__VentaId__47DBAE45" Association="MYBOXSALEModel.Store.FK__PAGO__VentaId__47DBAE45">
       <End Role="VENTA" EntitySet="VENTA" />
       <End Role="PAGO" EntitySet="PAGO" />
     </AssociationSet>
-    <AssociationSet Name="FK__PRODUCTO__Catego__21B6055D" Association="MYBOXSALEModel.Store.FK__PRODUCTO__Catego__21B6055D">
+    <AssociationSet Name="FK__PRODUCTO__Catego__22AA2996" Association="MYBOXSALEModel.Store.FK__PRODUCTO__Catego__22AA2996">
       <End Role="CATEGORIA" EntitySet="CATEGORIA" />
       <End Role="PRODUCTO" EntitySet="PRODUCTO" />
     </AssociationSet>
-    <AssociationSet Name="FK__PRODUCTO__Provee__20C1E124" Association="MYBOXSALEModel.Store.FK__PRODUCTO__Provee__20C1E124">
+    <AssociationSet Name="FK__PRODUCTO__Provee__21B6055D" Association="MYBOXSALEModel.Store.FK__PRODUCTO__Provee__21B6055D">
       <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
       <End Role="PRODUCTO" EntitySet="PRODUCTO" />
     </AssociationSet>
-    <AssociationSet Name="FK__PRODUCTO__Unidad__1FCDBCEB" Association="MYBOXSALEModel.Store.FK__PRODUCTO__Unidad__1FCDBCEB">
+    <AssociationSet Name="FK__PRODUCTO__Unidad__20C1E124" Association="MYBOXSALEModel.Store.FK__PRODUCTO__Unidad__20C1E124">
       <End Role="UNIDADMEDIDA" EntitySet="UNIDADMEDIDA" />
       <End Role="PRODUCTO" EntitySet="PRODUCTO" />
     </AssociationSet>
-    <AssociationSet Name="FK__PROMOCION__Produ__38996AB5" Association="MYBOXSALEModel.Store.FK__PROMOCION__Produ__38996AB5">
+    <AssociationSet Name="FK__PROMOCION__Produ__398D8EEE" Association="MYBOXSALEModel.Store.FK__PROMOCION__Produ__398D8EEE">
       <End Role="PRODUCTO" EntitySet="PRODUCTO" />
       <End Role="PROMOCION" EntitySet="PROMOCION" />
     </AssociationSet>
-    <AssociationSet Name="FK__PROMOCION__TipoI__37A5467C" Association="MYBOXSALEModel.Store.FK__PROMOCION__TipoI__37A5467C">
+    <AssociationSet Name="FK__PROMOCION__TipoI__38996AB5" Association="MYBOXSALEModel.Store.FK__PROMOCION__TipoI__38996AB5">
       <End Role="TIPOPROMOCION" EntitySet="TIPOPROMOCION" />
       <End Role="PROMOCION" EntitySet="PROMOCION" />
     </AssociationSet>
-    <AssociationSet Name="FK__USUARIO__Empresa__267ABA7A" Association="MYBOXSALEModel.Store.FK__USUARIO__Empresa__267ABA7A">
+    <AssociationSet Name="FK__USUARIO__Empresa__276EDEB3" Association="MYBOXSALEModel.Store.FK__USUARIO__Empresa__276EDEB3">
       <End Role="EMPRESA" EntitySet="EMPRESA" />
       <End Role="USUARIO" EntitySet="USUARIO" />
     </AssociationSet>
-    <AssociationSet Name="FK__USUARIORO__RolId__2D27B809" Association="MYBOXSALEModel.Store.FK__USUARIORO__RolId__2D27B809">
+    <AssociationSet Name="FK__USUARIORO__RolId__2E1BDC42" Association="MYBOXSALEModel.Store.FK__USUARIORO__RolId__2E1BDC42">
       <End Role="ROLES" EntitySet="ROLES" />
       <End Role="USUARIOROLES" EntitySet="USUARIOROLES" />
     </AssociationSet>
-    <AssociationSet Name="FK__USUARIORO__UserI__2C3393D0" Association="MYBOXSALEModel.Store.FK__USUARIORO__UserI__2C3393D0">
+    <AssociationSet Name="FK__USUARIORO__UserI__2D27B809" Association="MYBOXSALEModel.Store.FK__USUARIORO__UserI__2D27B809">
       <End Role="USUARIO" EntitySet="USUARIO" />
       <End Role="USUARIOROLES" EntitySet="USUARIOROLES" />
     </AssociationSet>
-    <AssociationSet Name="FK__VENTA__UsuarioId__3C69FB99" Association="MYBOXSALEModel.Store.FK__VENTA__UsuarioId__3C69FB99">
+    <AssociationSet Name="FK__VENTA__UsuarioId__3D5E1FD2" Association="MYBOXSALEModel.Store.FK__VENTA__UsuarioId__3D5E1FD2">
       <End Role="USUARIO" EntitySet="USUARIO" />
       <End Role="VENTA" EntitySet="VENTA" />
     </AssociationSet>
@@ -112,6 +112,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SKU" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="PrecioMostrador" Type="float" />
     <Property Name="PrecioCompra" Type="float" />
@@ -249,7 +250,7 @@
     <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK__DETALLEVE__Produ__412EB0B6">
+  <Association Name="FK__DETALLEVE__Produ__4222D4EF">
     <End Role="PRODUCTO" Type="MYBOXSALEModel.Store.PRODUCTO" Multiplicity="0..1" />
     <End Role="DETALLEVENTA" Type="MYBOXSALEModel.Store.DETALLEVENTA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -261,7 +262,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DETALLEVE__Venta__403A8C7D">
+  <Association Name="FK__DETALLEVE__Venta__412EB0B6">
     <End Role="VENTA" Type="MYBOXSALEModel.Store.VENTA" Multiplicity="0..1" />
     <End Role="DETALLEVENTA" Type="MYBOXSALEModel.Store.DETALLEVENTA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -273,7 +274,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PAGO__VentaId__46E78A0C">
+  <Association Name="FK__PAGO__VentaId__47DBAE45">
     <End Role="VENTA" Type="MYBOXSALEModel.Store.VENTA" Multiplicity="0..1" />
     <End Role="PAGO" Type="MYBOXSALEModel.Store.PAGO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -285,7 +286,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PRODUCTO__Catego__21B6055D">
+  <Association Name="FK__PRODUCTO__Catego__22AA2996">
     <End Role="CATEGORIA" Type="MYBOXSALEModel.Store.CATEGORIA" Multiplicity="0..1" />
     <End Role="PRODUCTO" Type="MYBOXSALEModel.Store.PRODUCTO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -297,7 +298,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PRODUCTO__Provee__20C1E124">
+  <Association Name="FK__PRODUCTO__Provee__21B6055D">
     <End Role="PROVEEDOR" Type="MYBOXSALEModel.Store.PROVEEDOR" Multiplicity="0..1" />
     <End Role="PRODUCTO" Type="MYBOXSALEModel.Store.PRODUCTO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -309,7 +310,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PRODUCTO__Unidad__1FCDBCEB">
+  <Association Name="FK__PRODUCTO__Unidad__20C1E124">
     <End Role="UNIDADMEDIDA" Type="MYBOXSALEModel.Store.UNIDADMEDIDA" Multiplicity="0..1" />
     <End Role="PRODUCTO" Type="MYBOXSALEModel.Store.PRODUCTO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -321,7 +322,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PROMOCION__Produ__38996AB5">
+  <Association Name="FK__PROMOCION__Produ__398D8EEE">
     <End Role="PRODUCTO" Type="MYBOXSALEModel.Store.PRODUCTO" Multiplicity="0..1" />
     <End Role="PROMOCION" Type="MYBOXSALEModel.Store.PROMOCION" Multiplicity="*" />
     <ReferentialConstraint>
@@ -333,7 +334,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PROMOCION__TipoI__37A5467C">
+  <Association Name="FK__PROMOCION__TipoI__38996AB5">
     <End Role="TIPOPROMOCION" Type="MYBOXSALEModel.Store.TIPOPROMOCION" Multiplicity="0..1" />
     <End Role="PROMOCION" Type="MYBOXSALEModel.Store.PROMOCION" Multiplicity="*" />
     <ReferentialConstraint>
@@ -345,7 +346,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__USUARIO__Empresa__267ABA7A">
+  <Association Name="FK__USUARIO__Empresa__276EDEB3">
     <End Role="EMPRESA" Type="MYBOXSALEModel.Store.EMPRESA" Multiplicity="0..1" />
     <End Role="USUARIO" Type="MYBOXSALEModel.Store.USUARIO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -357,7 +358,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__USUARIORO__RolId__2D27B809">
+  <Association Name="FK__USUARIORO__RolId__2E1BDC42">
     <End Role="ROLES" Type="MYBOXSALEModel.Store.ROLES" Multiplicity="0..1" />
     <End Role="USUARIOROLES" Type="MYBOXSALEModel.Store.USUARIOROLES" Multiplicity="*" />
     <ReferentialConstraint>
@@ -369,7 +370,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__USUARIORO__UserI__2C3393D0">
+  <Association Name="FK__USUARIORO__UserI__2D27B809">
     <End Role="USUARIO" Type="MYBOXSALEModel.Store.USUARIO" Multiplicity="0..1" />
     <End Role="USUARIOROLES" Type="MYBOXSALEModel.Store.USUARIOROLES" Multiplicity="*" />
     <ReferentialConstraint>
@@ -381,7 +382,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VENTA__UsuarioId__3C69FB99">
+  <Association Name="FK__VENTA__UsuarioId__3D5E1FD2">
     <End Role="USUARIO" Type="MYBOXSALEModel.Store.USUARIO" Multiplicity="0..1" />
     <End Role="VENTA" Type="MYBOXSALEModel.Store.VENTA" Multiplicity="*" />
     <ReferentialConstraint>
