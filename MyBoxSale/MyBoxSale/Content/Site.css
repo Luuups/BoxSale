@@ -1,4 +1,6 @@
-﻿@font-face {
+﻿
+/*#region layout*/
+@font-face {
   font-family: 'BoxSaleBase';
   src: url(/Content/fonts/KGInimitableOriginal.ttf);
 }
@@ -9,12 +11,62 @@
 }
 
 body {
-    font-family: 'BoxSaleBase', Fallback, sans-serif;
+    font-family: 'BoxSaleBase Small', Fallback, sans-serif;
+    font-size: 18px;
 }
 
 .custom-container {
     height: 100vh;
+    padding:0px;
+    width:100%;
 }
+
+.background-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    right: 0px;
+    z-index: -1;
+    background-image: url(/Content/img/welcome-logo.jpg);
+    background-size: 100% 100%;
+    opacity: 0.7;
+}
+
+.main-content {
+    margin: 95px 0px 0px 0px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.4);
+    height: 80%;
+}
+
+h2.header {
+    color: #4effd8;
+    margin: 30px 0px;
+    text-shadow: 2px 2px 5px #000000;
+    font-family: 'BoxSaleBase', Fallback, sans-serif;
+    font-size: 60px;
+}
+
+.secondary-header {
+    color: #fff352;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 25px;
+}
+
+.form-control {
+    font-size: inherit;
+}
+
+@media screen and (min-width: 1200px) {
+    .form-control {
+        height: 57px;
+    }
+}
+/*#endregion layout*/
+
 
 
 /*Propiedades del Login*/
@@ -82,6 +134,3 @@ body {
 }
 
 /*############################################################*/
-
-/*Form Empresa*/
-

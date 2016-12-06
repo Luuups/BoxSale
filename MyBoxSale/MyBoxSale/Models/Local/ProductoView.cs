@@ -8,6 +8,7 @@ namespace MyBoxSale.Models.Local
     public class ProductoView
     {
         public int Id { get; set; }
+        public string SKU { get; set; }
         public string Nombre { get; set; }
         public double? PrecioCompra { get; set; }
         public double? PrecioMostrador { get; set; }
