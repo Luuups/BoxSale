@@ -1,0 +1,27 @@
+﻿@model MyBoxSale.Models.CATEGORIA
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nombre)
+            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+        <input type="submit" value="Guardar" class="btn btn-danger" />
+}
+
+<div>
+    @Html.ActionLink("Regresar", "Index")
+</div>
+

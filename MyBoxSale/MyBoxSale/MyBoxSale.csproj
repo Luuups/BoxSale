@@ -164,12 +164,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NotificacionesController.cs" />
     <Compile Include="Controllers\PrincipalController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\UnidadMedidaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Core\BoxSaleController.cs" />
@@ -202,9 +204,11 @@
     <Compile Include="Models\EMPRESA.cs">
       <DependentUpon>BoxSaleEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Local\CategoriaView.cs" />
     <Compile Include="Models\Local\Notificacion.cs" />
     <Compile Include="Models\Local\ProductoView.cs" />
     <Compile Include="Models\Local\ProveedorView.cs" />
+    <Compile Include="Models\Local\UnidadView.cs" />
     <Compile Include="Models\Local\UsuarioView.cs" />
     <Compile Include="Models\Local\UsuarioViewEdit.cs" />
     <Compile Include="Models\PAGO.cs">
@@ -419,6 +423,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Proveedor\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Categoria\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Categoria\NuevaCategoria.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Categoria\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UnidadMedida\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UnidadMedida\NuevaUnidad.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UnidadMedida\Editar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
