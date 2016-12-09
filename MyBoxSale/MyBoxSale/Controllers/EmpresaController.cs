@@ -83,10 +83,6 @@ namespace MyBoxSale.Controllers
                 {
                 _usuario.FechaAlta = DateTime.Now;
                 _usuario.Activo=true;
-
-                Entities.USUARIO.Add(_usuario);
-                Entities.SaveChanges();
-
                 if (!Roles.Provider.RoleExists("Admin"))
                 {
                     Roles.CreateRole("Admin");
@@ -95,6 +91,8 @@ namespace MyBoxSale.Controllers
                 {
                     Roles.CreateRole("Cajero");
                 }
+                Entities.USUARIO.Add(_usuario);
+                Entities.SaveChanges();
                 Roles.AddUsersToRoles(new[] { _usuario.NombreUsuario }, new[] { "Admin" });
                 }
             }

@@ -28,6 +28,7 @@ namespace MyBoxSale.Controllers
                                     select new ProductoView
                                     {
                                         Id = producto.Id,
+                                        SKU=producto.SKU,
                                         Nombre = producto.Nombre,
                                         PrecioCompra = producto.PrecioCompra,
                                         PrecioMostrador = producto.PrecioMostrador,
@@ -129,6 +130,7 @@ namespace MyBoxSale.Controllers
                         var updateProducto = Entities.PRODUCTO.Find(_producto.Id);
                         if (updateProducto == null)
                             throw new Exception("No se Encontro el Producto");
+                        updateProducto.SKU = _producto.SKU;
                         updateProducto.Nombre = _producto.Nombre;
                         updateProducto.PrecioCompra = _producto.PrecioCompra;
                         updateProducto.PrecioMostrador = _producto.PrecioMostrador;
@@ -159,22 +161,26 @@ namespace MyBoxSale.Controllers
 
         private void CargaSelects()
         {
-                ViewBag.Categoria = (from Categoria in Entities.CATEGORIA
-                                     orderby Categoria.Nombre
-                                     select new SelectListItem
-                                     {
-                                         Value = SqlFunctions.StringConvert((double)Categoria.Id).Trim(),
-                                         Text = Categoria.Nombre
-                                     }).ToList();
-                ViewBag.Proveedor = (from proveedor in Entities.PROVEEDOR
-                                     where proveedor.Activo == true
-                                     orderby proveedor.Nombre
-                                     select new SelectListItem
-                                     {
-                                         Value = SqlFunctions.StringConvert((double)proveedor.Id).Trim(),
-                                         Text = proveedor.Nombre
-                                     }).ToList();
-                ViewBag.UnidadMedida = (from unidad in Entities.UNIDADMEDIDA
+            var preview = (from Categoria in Entities.CATEGORIA
+                           orderby Categoria.Nombre
+                           select new SelectListItem
+                           {
+                               Value = SqlFunctions.StringConvert((double)Categoria.Id).Trim(),
+                               Text = Categoria.Nombre
+                           }).ToList();
+            preview.Add(new SelectListItem { Selected = true, Text = "Selecciona un Categoria", Value = "" });
+            ViewBag.Categoria = preview;
+            preview = (from proveedor in Entities.PROVEEDOR
+                       where proveedor.Activo == true
+                       orderby proveedor.Nombre
+                       select new SelectListItem
+                       {
+                           Value = SqlFunctions.StringConvert((double)proveedor.Id).Trim(),
+                           Text = proveedor.Nombre
+                       }).ToList();
+            preview.Add(new SelectListItem { Selected = true, Text = "Selecciona un Proveedor", Value = "" });
+            ViewBag.Proveedor = preview;
+            preview=(from unidad in Entities.UNIDADMEDIDA
                                         where unidad.Activo == true
                                         orderby unidad.Nombre
                                         select new SelectListItem
@@ -182,6 +188,8 @@ namespace MyBoxSale.Controllers
                                             Value = SqlFunctions.StringConvert((double)unidad.Id).Trim(),
                                             Text = unidad.Nombre
                                         }).ToList();
+            preview.Add(new SelectListItem { Selected = true, Text = "Selecciona una Unidad", Value = "" });
+            ViewBag.UnidadMedida = preview;
                 
         }
     }

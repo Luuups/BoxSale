@@ -132,6 +132,7 @@
     <NavigationProperty Name="PROVEEDOR" Relationship="MYBOXSALEModel.FK__PRODUCTO__Provee__20C1E124" FromRole="PRODUCTO" ToRole="PROVEEDOR" />
     <NavigationProperty Name="UNIDADMEDIDA" Relationship="MYBOXSALEModel.FK__PRODUCTO__Unidad__1FCDBCEB" FromRole="PRODUCTO" ToRole="UNIDADMEDIDA" />
     <NavigationProperty Name="PROMOCION" Relationship="MYBOXSALEModel.FK__PROMOCION__Produ__38996AB5" FromRole="PRODUCTO" ToRole="PROMOCION" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="PROMOCION">
     <Key>

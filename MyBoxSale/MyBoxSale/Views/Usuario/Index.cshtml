@@ -32,7 +32,7 @@
                 <td>
                     <a href="@Url.Action("Edit","Usuario",new { id=usuario.Id })">Editar</a>
                     <a href="@Url.Action("Delete","Usuario",new { id=usuario.Id })">Eliminar</a>
-                    <a href="@Url.Action("Disabled","Usuario",new { id=usuario.Id })">Desactivar</a>
+                    <a href="@Url.Action("Disabled","Usuario",new { id=usuario.Id })">@(usuario.Activo.HasValue && usuario.Activo.Value? "Desactivar":"Activar")</a>
                 </td>
             </tr>
         }

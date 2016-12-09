@@ -1,4 +1,18 @@
---Drop database MYBOXSALE2
+--Script para matar conexiones a la BD
+--USE master
+--go
+
+--DECLARE @dbname sysname
+--SET @dbname = 'MYBOXSALE'
+
+--DECLARE @spid int
+--SELECT @spid = min(spid) from master.dbo.sysprocesses where dbid = db_id(@dbname)
+--WHILE @spid IS NOT NULL
+--BEGIN
+--EXECUTE ('KILL ' + @spid)
+--SELECT @spid = min(spid) from master.dbo.sysprocesses where dbid = db_id(@dbname) AND spid > @spid
+--END
+--Drop database MYBOXSALE
 CREATE DATABASE MYBOXSALE
 
 GO
@@ -54,6 +68,7 @@ GO
 CREATE TABLE PRODUCTO
 (
 Id INT PRIMARY KEY IDENTITY,
+SKU VARCHAR(30) UNIQUE NOT NULL,
 Nombre VARCHAR(50) NOT NULL,
 PrecioMostrador FLOAT DEFAULT 0,
 PrecioCompra FLOAT DEFAULt 0,

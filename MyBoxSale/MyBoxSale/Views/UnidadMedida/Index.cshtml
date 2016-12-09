@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<MyBoxSale.Models.Local.UnidadView>
+<h2>Unidad de Medida</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Abreviado</th>
+            <th>Activo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var unidad in Model)
+        {
+            <tr>
+                <td>@unidad.Id</td>
+                <td>@unidad.Nombre</td>
+                <td>@unidad.Abreviado</td>
+                <td>@Html.CheckBox("Activo", unidad.Activo.HasValue?unidad.Activo.Value:false, new { @disabled="disabled" })</td>
+                <td>
+                    <a href="@Url.Action("Editar","UnidadMedida",new {id=unidad.Id})">Editar</a>&nbsp;
+                    <a href="@Url.Action("Desactivar","UnidadMedida",new {id=unidad.Id})">@(unidad.Activo.HasValue && unidad.Activo.Value?"Desactivas":"Activar")</a>&nbsp;
+                    <a href="@Url.Action("Eliminar","UnidadMedida",new {id=unidad.Id})">Eliminar</a>&nbsp;
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Nueva Unidad","NuevaUnidad","UnidadMedida")
