@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<MyBoxSale.Models.Local.UsuarioView>
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 col-md-offset-1">
+        <h2>Usuarios del Sistema</h2>
+        <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Nombre de Usuario</th>
+            <th>Teléfono</th>
+            <th>Empresa</th>
+            <th>Activo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Id</td>
+                <td>@usuario.Nombre</td>
+                <td>@usuario.Apellidos</td>
+                <td>@usuario.NombreUsuario</td>
+                <td>@usuario.Telefono</td>
+                <td>@usuario.Empresa.Nombre</td>
+                <td>@Html.CheckBox("Activo", usuario.Activo.HasValue ? usuario.Activo.Value : false, new { @disabled = "disabled" })</td>
+                <td>
+                    <a href="@Url.Action("Edit","Usuario",new { id=usuario.Id })">Editar</a>
+                    <a href="@Url.Action("Delete","Usuario",new { id=usuario.Id })">Eliminar</a>
+                    <a href="@Url.Action("Disabled","Usuario",new { id=usuario.Id })">Desactivar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+        @Html.ActionLink("Nuevo Usuario", "NewUser", "Usuario")
+    </div>
+</div>
+
