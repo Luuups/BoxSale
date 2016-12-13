@@ -2,6 +2,10 @@
     // default options
     options: {
         texto: '',
+        size: 'small',
+        type: {
+            
+        },
         buttons: {
         
         },

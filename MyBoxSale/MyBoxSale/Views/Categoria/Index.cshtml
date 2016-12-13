@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<MyBoxSale.Models.Local.CategoriaView>
+<h2>Categorias</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Activo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cat in Model)
+        {
+            <tr>
+                <td>@cat.Id</td>
+                <td>@cat.Nombre</td>
+                <td>@Html.CheckBox("Activo", cat.Activo.HasValue && cat.Activo.Value ? true : false, new { @disabled="disabled" })</td>
+                <td>
+                    <a href="@Url.Action("Editar", "Categoria", new { id = cat.Id })">Editar</a>&nbsp;
+                    <a href="@Url.Action("Desactivar", "Categoria", new { id = cat.Id })">@(cat.Activo.HasValue && cat.Activo.Value?"Desactivar":"Activar")</a>&nbsp;
+                    <a href="@Url.Action("Eliminar", "Categoria", new { id = cat.Id })">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Nueva Categoría","NuevaCategoria","Categoria")
