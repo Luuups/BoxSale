@@ -13,14 +13,18 @@
 </script>
 
 
-<div class="col-md-3"></div>
-<div class="col-md-6">
-    <h2 class="header">Bienvenido</h2>
-    <div class="alert alert-danger">
-        Para Iniciar debes configurar algunos aspectos, por favor sigue las instrucciones para completar el proceso.
+<div class="col-md-12 header-empresa">
+    <div class="alert text-center">
+        Para iniciar debes configurar algunos aspectos, por favor sigue las instrucciones para completar el proceso.
     </div>
+</div>
+
+<div class="col-md-6">
+    <h2 class="header text-center">Bienvenido</h2>
+</div>
+<div class="col-md-6">
     <div class="row">
-        <div class="col-md-12 col-sm-12">
+        <div class="col-md-8 col-sm-8 form-empresa-container">
             @using (Html.BeginForm("CreaEmpresa", "Empresa", FormMethod.Post, new { @id = "FormEmpresa" }))
             {
                 @Html.ValidationSummary(false, "", new {@class="text-danger" })
@@ -38,11 +42,10 @@
                     @Html.LabelFor(x => x.Telefono, new { @class="secondary-header"})
                     @Html.TextBoxFor(x => x.Telefono, new { @class = "form-control" })
                 </div>
-                <button type="submit" id="Guardar" name="Guardar" class="btn btn-danger btn-lg">Guardar <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+                <button type="submit" id="Guardar" name="Guardar" class="btn btn-sale btn-lg">Continuar <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
             }
         </div>
         <div class='col-md-4 col-sm-4'>
         </div>
     </div>
 </div>
-<div class="col-md-3"></div>

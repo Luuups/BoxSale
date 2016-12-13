@@ -2,39 +2,50 @@
     ViewBag.Title = "CreaRolesUsuarios";
 }
 @model MyBoxSale.Models.USUARIO
-<h2>Creacion de Usuarios</h2>
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
+
+<div class="col-md-12 header-empresa">
+    <div class="alert text-center">
+        Ya casi terminas..
+    </div>
+</div>
+
+<div class="col-md-6">
+    <h2 class="header text-center">Creación de Usuarios</h2>
+</div>
+
+<div class="col-md-6">
+    <div class="row">
+        <div class="col-md-8" style="padding-top:10px">
         @using (Html.BeginForm("CreaRolesUsuarios", "Empresa", FormMethod.Post))
         { 
             @Html.HiddenFor(x => x.EmpresaId)
-            <div class="form-group">
-                @Html.LabelFor(x => x.Nombre)
+            <div class="form-group margin-bottom-5">
+                @Html.LabelFor(x => x.Nombre, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control", @required = "required" })
             </div>
-            <div class="form-group">
-                @Html.LabelFor(x => x.Apellidos)
+            <div class="form-group margin-bottom-5">
+                @Html.LabelFor(x => x.Apellidos, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Apellidos, new { @class = "form-control", @required = "required" })
             </div>
-            <div class="form-group">
-                @Html.LabelFor(x => x.NombreUsuario)
-                @Html.TextBoxFor(x => x.NombreUsuario, new { @class = "form-control", @required = "required" })
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(x => x.Password)
-                @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @type = "password", @required = "required" })
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(x => x.Direccion)
+            <div class="form-group margin-bottom-5">
+                @Html.LabelFor(x => x.Direccion, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
             </div>
-            <div class="form-group">
-                @Html.LabelFor(x => x.Telefono)
+            <div class="form-group margin-bottom-5">
+                @Html.LabelFor(x => x.Telefono, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Telefono, new { @class = "form-control" })
             </div>
-            <button type="submit" class="btn btn-danger">Continuar <span class=""></span></button>
+            <div class="form-group margin-bottom-5">
+                @Html.LabelFor(x => x.NombreUsuario, new { @class="secondary-header"})
+                @Html.TextBoxFor(x => x.NombreUsuario, new { @class = "form-control", @required = "required" })
+            </div>
+            <div class="form-group margin-bottom-5">
+                @Html.LabelFor(x => x.Password, new { @class="secondary-header"})
+                @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @type = "password", @required = "required" })
+            </div>
+            
+            <button type="submit" class="btn btn-sale">Guardar <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
 }
     </div>
-    <div class="col-md-1"></div>
+    </div>
 </div>
