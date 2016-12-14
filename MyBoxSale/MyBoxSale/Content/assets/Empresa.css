@@ -3,8 +3,15 @@
     background-color: #ff8989
 }
 
-.form-empresa-container {
-    padding-top:100px
+@media screen and (max-height: 181px) {
+    .form-empresa-container {
+        padding-top: 70px;
+    }
+}
+@media screen and (min-height: 180px) {
+    .form-empresa-container {
+        padding-top:0px
+    }
 }
 
 .form-group {
