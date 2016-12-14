@@ -19,12 +19,12 @@
     </div>
 </div>
 
-<div class="col-md-6">
+<div class="col-md-6  animated bounceInUp">
     <h2 class="header text-center">Bienvenido</h2>
 </div>
-<div class="col-md-6">
+<div class="col-md-6  animated bounceInUp">
     <div class="row">
-        <div class="col-md-8 col-sm-8 form-empresa-container">
+        <div class="col-md-10 col-sm-10 form-empresa-container">
             @using (Html.BeginForm("CreaEmpresa", "Empresa", FormMethod.Post, new { @id = "FormEmpresa" }))
             {
                 @Html.ValidationSummary(false, "", new {@class="text-danger" })

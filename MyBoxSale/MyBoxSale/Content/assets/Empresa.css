@@ -7,6 +7,14 @@
     padding-top:100px
 }
 
-.margin-bottom-5 {
+.form-group {
     margin-bottom:5px;
+    padding: 0px 100px;
+}
+
+.btn-sale {
+    color: #333;
+    background-color: #ff8989;
+    float: right;
+    margin: 20px 100px;
 }
