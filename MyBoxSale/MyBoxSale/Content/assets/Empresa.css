@@ -3,10 +3,25 @@
     background-color: #ff8989
 }
 
-.form-empresa-container {
-    padding-top:100px
+@media screen and (max-height: 181px) {
+    .form-empresa-container {
+        padding-top: 70px;
+    }
+}
+@media screen and (min-height: 180px) {
+    .form-empresa-container {
+        padding-top:0px
+    }
 }
 
-.margin-bottom-5 {
+.form-group {
     margin-bottom:5px;
+    padding: 0px 100px;
+}
+
+.btn-sale {
+    color: #333;
+    background-color: #ff8989;
+    float: right;
+    margin: 20px 100px;
 }

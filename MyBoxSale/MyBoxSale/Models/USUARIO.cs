@@ -27,8 +27,10 @@ namespace MyBoxSale.Models
         [Required(ErrorMessage = "Apellidos requeridos")]
         public string Apellidos { get; set; }
         [Required(ErrorMessage = "Nombre de usuario requerido")]
+        [Display(Name = "Nombre de Usuario")]
         public string NombreUsuario { get; set; }
         [Required(ErrorMessage = "Contraseña requerida")]
+        [Display(Name = "Contraseña")]
         public string Password { get; set; }
         public string Telefono { get; set; }
         [Display(Name = "Dirección")]

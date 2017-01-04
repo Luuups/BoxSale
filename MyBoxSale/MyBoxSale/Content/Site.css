@@ -12,8 +12,14 @@
 
 body {
     font-family: 'BoxSaleBase Small', Fallback, sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     overflow:hidden;
+    color: #333333;
+}
+
+.background-shadow {
+    height:100vh;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .custom-container {
@@ -38,7 +44,7 @@ body {
 .main-content {
     margin: 0px 0px 0px 0px;
     width: 100%;
-    background-color: rgba(0,0,0,0.7);
+    /*background-color: rgba(0,0,0,0.7);*/
     height: 100%;
 }
 
@@ -49,27 +55,28 @@ h2.header {
     margin: 30px;
     text-shadow: 2px 2px 5px #000000;
     font-family: 'BoxSaleBase', Fallback, sans-serif;
-    font-size: 60px;
+    font-size:70px;
 }
 
 .secondary-header {
     /*color: #fff352;*/
     color: rgb(12, 199, 255);
     text-shadow: 2px 2px 5px #000000;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .form-control {
     font-size: inherit;
-    background: transparent;
-    color: #ff8989;
+    /*background: transparent;*/
+    /*color: #ff8989;*/
+    color:#333333;
     font-weight: 900;
     height: 45px;
 }
 
 @media screen and (min-width: 1800px) {
     .form-control {
-        height: 57px;
+        /*height: 57px;*/
     }
 }
 /*#endregion layout*/
@@ -137,9 +144,11 @@ h2.header {
     height:60px;
 }
 
-.btn-sale {
-    color: #333;
-    background-color: #ff8989;
+.no-padding {
+    padding:0px;
 }
 
+.full-height {
+    height:100%;
+}
 /*############################################################*/

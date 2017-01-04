@@ -9,42 +9,74 @@
     </div>
 </div>
 
-<div class="col-md-6">
-    <h2 class="header text-center">Creación de Usuarios</h2>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="position:absolute;height:100%;width:100%;z-index:-1">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="height:100vh">
+      <img src="/Content/img/welcome-logo3.jpg" alt="Chania" style="height:100vh;width:100vw">
+    </div>
+
+    <div class="item" style="height:100vh">
+      <img src="/Content/img/welcome-logo1.jpg" alt="Flower" style="height:100vh;width:100vw">
+    </div>
+
+    <div class="item" style="height:100vh">
+      <img src="/Content/img/welcome-logo2.jpg" alt="Flower" style="height:100vh;width:100vw">
+    </div>
+
+    <div class="item" style="height:100vh">
+      <img src="/Content/img/welcome-logo4.jpg" alt="Flower" style="height:100vh;width:100vw">
+    </div>
+  </div>
 </div>
 
-<div class="col-md-6">
+<div class="col-md-12  animated bounceInUp">
+    
+</div>
+
+<div class="col-md-12  animated bounceInUp background-shadow">
     <div class="row">
-        <div class="col-md-8" style="padding-top:10px">
+        <h2 class="header text-center">Creación de Usuarios</h2>
+        <div class="col-md-12 form-users" style="padding-top:10px">
         @using (Html.BeginForm("CreaRolesUsuarios", "Empresa", FormMethod.Post))
         { 
             @Html.HiddenFor(x => x.EmpresaId)
-            <div class="form-group margin-bottom-5">
+            <div class="form-group col-md-6">
                 @Html.LabelFor(x => x.Nombre, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control", @required = "required" })
             </div>
-            <div class="form-group margin-bottom-5">
+            <div class="form-group col-md-6">
                 @Html.LabelFor(x => x.Apellidos, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Apellidos, new { @class = "form-control", @required = "required" })
             </div>
-            <div class="form-group margin-bottom-5">
+            <div class="form-group col-md-6">
                 @Html.LabelFor(x => x.Direccion, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
             </div>
-            <div class="form-group margin-bottom-5">
+            <div class="form-group col-md-6">
                 @Html.LabelFor(x => x.Telefono, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Telefono, new { @class = "form-control" })
             </div>
-            <div class="form-group margin-bottom-5">
+            <div class="form-group col-md-6">
                 @Html.LabelFor(x => x.NombreUsuario, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.NombreUsuario, new { @class = "form-control", @required = "required" })
             </div>
-            <div class="form-group margin-bottom-5">
+            <div class="form-group col-md-6">
                 @Html.LabelFor(x => x.Password, new { @class="secondary-header"})
                 @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @type = "password", @required = "required" })
             </div>
             
-            <button type="submit" class="btn btn-sale">Guardar <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+            <div class="col-md-12 no-padding">
+                <button type="submit" class="btn btn-sale btn-lg">Guardar <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+            </div>
 }
     </div>
     </div>

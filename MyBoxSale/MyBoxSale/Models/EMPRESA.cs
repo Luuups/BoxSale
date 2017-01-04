@@ -22,6 +22,7 @@ namespace MyBoxSale.Models
     
         public int Id { get; set; }
         [Required(ErrorMessage = "Nombre requerido")]
+        [Display(Name = "Nombre de la empresa")]
         public string Nombre { get; set; }
         public Nullable<System.DateTime> FechaCreacion { get; set; }
         [Display(Name = "Dirección")]

@@ -19,12 +19,44 @@
     </div>
 </div>
 
-<div class="col-md-6">
-    <h2 class="header text-center">Bienvenido</h2>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="position:absolute;height:100%;width:100%;z-index:-1">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="height:100vh">
+      <img src="/Content/img/welcome-logo3.jpg" alt="Chania" style="height:100vh;width:100vw">
+    </div>
+
+    <div class="item" style="height:100vh">
+      <img src="/Content/img/welcome-logo1.jpg" alt="Flower" style="height:100vh;width:100vw">
+    </div>
+
+    <div class="item" style="height:100vh">
+      <img src="/Content/img/welcome-logo2.jpg" alt="Flower" style="height:100vh;width:100vw">
+    </div>
+
+    <div class="item" style="height:100vh">
+      <img src="/Content/img/welcome-logo4.jpg" alt="Flower" style="height:100vh;width:100vw">
+    </div>
+  </div>
 </div>
-<div class="col-md-6">
+
+
+<div class="col-md-6  animated bounceInUp">
+    
+</div>
+<div class="col-md-6  animated bounceInUp background-shadow">
     <div class="row">
-        <div class="col-md-8 col-sm-8 form-empresa-container">
+        <div class="col-md-10 col-sm-10 form-empresa-container">
+            <h2 class="header text-center">Bienvenido</h2>
+
             @using (Html.BeginForm("CreaEmpresa", "Empresa", FormMethod.Post, new { @id = "FormEmpresa" }))
             {
                 @Html.ValidationSummary(false, "", new {@class="text-danger" })
